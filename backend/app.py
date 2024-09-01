@@ -14,7 +14,7 @@ model = MusicGen.get_pretrained('small')
 print("loading11")
 device = torch.device("cpu")
 print("loading2")
-#model.lm.load_state_dict(torch.load('backend/lm_final.pt', map_location=device)) 
+model.lm.load_state_dict(torch.load('backend/lm_final.pt', map_location=device)) 
 print("loading3")
 model.lm = model.lm.to(torch.float32).to('cpu')  # Load on CPU for 
 print("loading")
