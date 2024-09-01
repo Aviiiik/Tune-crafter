@@ -1,0 +1,201 @@
+/* General Layout */
+.launch-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+/* Back Button Positioning (Top Left) */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 50px;
+  background-color: #1DB954;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-group label{
+  color: #ffffff;
+}
+
+.back-btn:hover {
+  background-color: #1ed760;
+  box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
+  transform: translateY(-3px);
+  animation: bob 0.8s ease infinite;
+}
+
+/* Form Container */
+.launch-form {
+  width: 100%;
+  max-width: 1738px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+}
+
+.launch-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1DB954;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group textarea,
+.form-group select,
+.form-group input[type="range"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Image Holders */
+.image-holders {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.image-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  backdrop-filter: blur(0px);
+}
+
+.image-holder img {
+  height: 200px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+/* Image Holder Button */
+.image-holder button {
+  margin-top: 10px;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 50px;
+  background-color: #1DB954;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.image-holder button:hover {
+  background-color: #1ed760;
+  box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
+  transform: translateY(-3px);
+  animation: bob 0.8s ease infinite;
+}
+
+/* Background Animations */
+.music-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(45deg, #000000, #0a2f1f);
+}
+
+.music-note {
+  position: absolute;
+  bottom: -100px;
+  font-size: 60px;
+  animation: float 10s linear infinite;
+}
+
+.music-note:nth-child(odd) {
+  color: rgba(29, 185, 84, 0.7); /* Spotify green */
+}
+
+.music-note:nth-child(even) {
+  color: rgba(255, 255, 255, 0.7); /* White */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.submit-status {
+  color: white; /* Set the text color to white */
+  font-weight: bold;
+  margin-top: 10px;
+}
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 50px;
+  background-color: #1DB954;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #17a74a;
+}
